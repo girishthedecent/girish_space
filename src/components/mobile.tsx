@@ -61,7 +61,10 @@ export function MobileMenu() {
       <div className="scrim" onClick={close} />
       <aside className="panel" role="dialog" aria-modal="true" aria-label="Menu">
         <div className="phead">
-          <span className="brand"><span className="gp">GP</span><span className="pname">girish<i>the</i>decent</span></span>
+          <span className="brand">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="avatar" src="/avatar.png" alt="" width={34} height={34} />
+            <span className="pname">girish<i>the</i>decent</span></span>
           <button ref={closeBtn} className="pclose" onClick={close} aria-label="Close menu">
             <svg viewBox="0 0 24 24" aria-hidden><path d="M6 6l12 12M18 6 6 18" /></svg>
           </button>

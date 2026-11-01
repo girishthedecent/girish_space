@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 import { cacheLife } from "next/cache";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { site } from "@/content/site";
 
 export const alt = `${site.name} — ${site.title}`;
@@ -20,12 +22,14 @@ async function serif(italic: boolean) {
 }
 
 export default async function OG() {
-  const [regular, italic] = await Promise.all([serif(false), serif(true)]);
+  const [regular, italic, img] = await Promise.all([serif(false), serif(true), readFile(join(process.cwd(), "public/avatar.png"))]);
+  const avatar = `data:image/png;base64,${img.toString("base64")}`;
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", background: "#000", color: "#f2f2f0", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "72px 80px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 18, fontSize: 26, color: "#a3a3a0" }}>
-          <div style={{ width: 56, height: 56, border: "2px solid #f2f2f0", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", color: "#f2f2f0", fontSize: 22 }}>GP</div>
+          {/* eslint-disable-next-line jsx-a11y/alt-text */}
+          <img src={avatar} width={56} height={56} style={{ borderRadius: 14, border: "1px solid #3a3a37" }} />
           {site.handle}
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>

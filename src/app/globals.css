@@ -44,6 +44,8 @@ button { font: inherit; color: inherit; }
 .brand { display: flex; align-items: center; gap: 12px; font: 500 13.5px var(--mono); }
 .gp { width: 34px; height: 34px; border: 1.5px solid var(--ink); display: grid; place-items: center; font: 600 13px var(--mono); border-radius: 8px; }
 .brand i { font-style: normal; color: var(--dim); }
+.avatar { width: 34px; height: 34px; border-radius: 9px; border: 1px solid var(--line2); object-fit: cover; display: block; transition: transform .4s cubic-bezier(.22,1,.36,1), border-color .3s; }
+.brand:hover .avatar { transform: rotate(-6deg) scale(1.06); border-color: var(--mu); }
 .nav { display: flex; gap: 30px; font-size: 13.5px; color: var(--mu); }
 .nav a { transition: color .2s; } .nav a:hover, .nav a.on { color: var(--ink); }
 .status { display: flex; align-items: center; gap: 9px; font: 12px var(--mono); color: var(--mu); }
@@ -606,7 +608,7 @@ html { -webkit-tap-highlight-color: transparent; }
   .msheet.open .panel { transform: none; }
   .phead { display: flex; align-items: center; justify-content: space-between; height: 46px; }
   .phead .brand { gap: 10px; display: flex; align-items: center; }
-  .phead .brand .gp { display: grid; }
+  .phead .brand .avatar { display: block; }
   .phead .brand .pname { display: inline; }
   .phead .pname { font: 500 13px var(--mono); } .phead .pname i { font-style: normal; color: var(--dim); }
   .pclose { width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line2); background: var(--p2); display: grid; place-items: center; cursor: pointer; }

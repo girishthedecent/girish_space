@@ -10,7 +10,8 @@ export function TopBar({ active }: { active?: "home" | "projects" }) {
     <header className="top">
       <div className="w">
         <Link href="/" className="brand" aria-label="Home">
-          <span className="gp">GP</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="avatar" src="/avatar.png" alt="" width={34} height={34} />
           <span>
             girish<i>the</i>decent
           </span>

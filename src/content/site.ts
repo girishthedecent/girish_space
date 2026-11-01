@@ -158,7 +158,7 @@ export const codebookFacts = [
 export const stack: { group: string; items: { name: string; icon?: string }[] }[] = [
   { group: "Languages", items: [{ name: "TypeScript", icon: "siTypescript" }, { name: "JavaScript", icon: "siJavascript" }, { name: "C++", icon: "siCplusplus" }, { name: "Java", icon: "siOpenjdk" }, { name: "Python", icon: "siPython" }] },
   { group: "Backend", items: [{ name: "Node.js", icon: "siNodedotjs" }, { name: "Express", icon: "siExpress" }, { name: "FastAPI", icon: "siFastapi" }, { name: "Socket.IO", icon: "siSocketdotio" }, { name: "BullMQ" }, { name: "Inngest" }] },
-  { group: "AI", items: [{ name: "Gemini", icon: "siGooglegemini" }, { name: "RAG" }, { name: "Agents" }, { name: "pgvector", icon: "siPostgresql" }] },
+  { group: "AI", items: [{ name: "RAG" }, { name: "Agents" }, { name: "pgvector", icon: "siPostgresql" }] },
   { group: "Frontend", items: [{ name: "React", icon: "siReact" }, { name: "Next.js", icon: "siNextdotjs" }, { name: "Vite", icon: "siVite" }, { name: "Tailwind", icon: "siTailwindcss" }] },
   { group: "Data", items: [{ name: "PostgreSQL", icon: "siPostgresql" }, { name: "MySQL", icon: "siMysql" }, { name: "MongoDB", icon: "siMongodb" }, { name: "Redis", icon: "siRedis" }, { name: "Prisma", icon: "siPrisma" }] },
   { group: "Ops & Testing", items: [{ name: "Docker", icon: "siDocker" }, { name: "AWS" }, { name: "Linux", icon: "siLinux" }, { name: "GitHub Actions", icon: "siGithubactions" }, { name: "Playwright" }, { name: "Vitest", icon: "siVitest" }] },
